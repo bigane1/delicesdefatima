@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script  type="text/javascript">
+   function     sendWhatsAppMessage() {
+    const phoneNumber = '+33 6 35 95 36 66';
+    const message = "Besoin d'informations sur un produit";
+    const apiUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(apiUrl, '_blank');
+  }
+</script>
+</head>
+<body>
 <div class="col-lg-4 col-12">
     <div class="contact-us-sidebar mt-5 mt-lg-0">
         <div class="contact-info">
@@ -18,7 +31,11 @@
                 </div>
                 <div class="text">
                     <span>Appelez Nous</span>
-                    <h6>+33 6 35 95 36 66 </h6>
+                    <h6>+33 6 35 95 36 66  <a onclick="sendWhatsAppMessage()" ><i class="fab fa-whatsapp"></i></a>
+                     </h6>
+                     <!-- <h6><a onclick="sendWhatsAppMessage()" ><i class="fab fa-whatsapp"></i></a></h6> -->
+                            
+                  
                 </div>
             </div>
             <div class="single-info">
@@ -46,3 +63,6 @@
 
     </div>
 </div>
+</body>
+
+</html>

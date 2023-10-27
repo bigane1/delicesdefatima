@@ -102,8 +102,9 @@
                     </div>
                     <div class="col-md-4 col-lg-4 col-12">
                         <div class="footer-social-icon ms-md-5 text-lg-md-end">
-                            <a href="https://www.facebook.com/profile.php?id=100086796085896" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/bwaybusiness/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <?php
+                            include 'shared/social.php';
+                            ?>
                         </div>
                     </div>
                 </div>

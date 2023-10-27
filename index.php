@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <script  type="text/javascript">
+   function     sendWhatsAppMessage() {
+    const phoneNumber = '+33 6 35 95 36 66';
+    const message = "Besoin d'informations sur un produit";
+    const apiUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(apiUrl, '_blank');
+  }
+</script>
+</head>
 
 <?php
 include 'shared/head.php';
@@ -28,9 +38,9 @@ include 'shared/header.php';
                             <a href="contact.php" class="theme-btn me-sm-4 wow fadeExpert Débouchage CanalisationsInLeft" data-wow-duration="1.2s"
                                data-wow-delay=".8s">Contactez-nous</a>
                             <a class="theme-btn me-sm-4 wow fadeInLeft" data-wow-duration="1.2s"
-                               data-wow-delay=".8s">+33 6 35 95 36 66 </a>
+                               data-wow-delay=".8s"  onclick="sendWhatsAppMessage()">+33 6 35 95 36 66 <i class="fab fa-whatsapp"></i> </a>                 
                             <a class="theme-btn me-sm-4 wow fadeInLeft" data-wow-duration="1.2s"
-                               data-wow-delay=".8s">+33 6 35 95 36 66 </a>
+                               data-wow-delay=".8s">+33 6 35 95 36 66 <i class="fab fa-whatsapp"></i></a>
                              
                         </div>
                     </div>

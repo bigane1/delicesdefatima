@@ -1,5 +1,18 @@
 
 <!-- preloader -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script  type="text/javascript">
+   function     sendWhatsAppMessage() {
+    const phoneNumber = '+33 6 35 95 36 66';
+    const message = "Besoin d'informations sur un produit";
+    const apiUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(apiUrl, '_blank');
+  }
+</script>
+</head>
+<body>
 <div id="preloader" class="preloader">
     <div class="animation-preloader">
         <div class="spinner">
@@ -52,17 +65,15 @@
             <h3>Information</h3>
             <ul>
                 <li><span><i class="fal fa-map"></i></span>60 rue Claude Monet - Carrières Sous Poissy 78955</li>
-                <li><span><i class="fal fa-phone"></i></span>+33 6 35 95 36 66 </li>
+                <li><span><i class="fal fa-phone" onclick="sendWhatsAppMessage()"></i></span>+33 6 35 95 36 66  <a onclick="sendWhatsAppMessage()" ><i class="fab fa-whatsapp"></i></a></li>
                   <li><span><i class="fal fa-envelope"></i></span>delicesdefatima@gmail.com</li>
             </ul>
         </div>
         <div class="offset-menu-footer">
             <div class="offset-menu-social-icon">
-                <a href="https://www.facebook.com/profile.php?id=100086796085896"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+            <?php
+                            include 'shared/social.php';
+                            ?>
             </div>
         </div> <!-- /.offset-menu-footer -->
     </div> <!-- /.offset-menu-wrapper -->
@@ -87,10 +98,8 @@
             </div>
             <div class="header-right-elements d-flex align-items-center justify-content-between">
 
-                 <a href="contact.php" class="theme-btn d-none d-sm-block">Contactez-nous</a>
-
-
-                <a href="contact.php" class="devis theme-btn d-none d-sm-block">+33 6 35 95 36 66 </a>
+                <a href="contact.php" class="theme-btn d-none d-sm-block">Contactez-nous</a>
+                <a  onclick="sendWhatsAppMessage()" class="devis theme-btn d-none d-sm-block">+33 6 35 95 36 66  <i class="fab fa-whatsapp"></i></a>
                  <a href="#" class="side-menu-toggle d-none d-xl-block"><i class="fal fa-bars"></i></a>
                 <div class="d-inline-block ms-4 d-xl-none">
                     <div class="mobile-nav-wrap">
@@ -142,3 +151,6 @@
         <a href="https://www.instagram.com/Enovwaybusiness/" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
 </div>
+</body>
+
+</html>
